@@ -11,6 +11,8 @@
 		8B18A8E228DE35CA002C268E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B18A8E128DE35CA002C268E /* ContentView.swift */; };
 		8B18A8E428DE35D7002C268E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B18A8E328DE35D7002C268E /* Assets.xcassets */; };
 		8B18A8E728DE35D7002C268E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B18A8E628DE35D7002C268E /* Preview Assets.xcassets */; };
+		8B18A8EE28DE3BC3002C268E /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B18A8ED28DE3BC3002C268E /* TimeCounter.swift */; };
+		8B18A8F028DE430E002C268E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B18A8EF28DE430E002C268E /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		8B18A8E128DE35CA002C268E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8B18A8E328DE35D7002C268E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B18A8E628DE35D7002C268E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B18A8ED28DE3BC3002C268E /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
+		8B18A8EF28DE430E002C268E /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				8B18A8DF28DE35CA002C268E /* StateAndDataFlowApp.swift */,
 				8B18A8E128DE35CA002C268E /* ContentView.swift */,
+				8B18A8EF28DE430E002C268E /* RegisterView.swift */,
+				8B18A8ED28DE3BC3002C268E /* TimeCounter.swift */,
 				8B18A8E328DE35D7002C268E /* Assets.xcassets */,
 				8B18A8E528DE35D7002C268E /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B18A8E228DE35CA002C268E /* ContentView.swift in Sources */,
+				8B18A8F028DE430E002C268E /* RegisterView.swift in Sources */,
+				8B18A8EE28DE3BC3002C268E /* TimeCounter.swift in Sources */,
 				8B18A8E028DE35CA002C268E /* StateAndDataFlowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
