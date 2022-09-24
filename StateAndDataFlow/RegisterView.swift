@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct RegisterView: View {
+    
+    @State private var userName = ""
+    @EnvironmentObject private var user: UserManager
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextField("Enter your name...", text: $userName)
+                .multilineTextAlignment(.center)
+            Button(action: registerUser) {
+                HStack{
+                    Image(systemName: "checkmark.circle")
+                    Text("OK")
+                }
+            }
+        }
+    }
+    
+    private func registerUser() {
+        if !userName.isEmpty {
+            user.name = userName
+            user.isRegistered.toggle()
+        }
     }
 }
 
