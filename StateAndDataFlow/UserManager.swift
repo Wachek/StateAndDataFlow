@@ -10,8 +10,4 @@ import Combine
 final class UserManager: ObservableObject {
     @Published var isRegistered = false
     var name = ""
-    var numberOfSymbols: Int {
-        name.count
-    }
-    
 }
