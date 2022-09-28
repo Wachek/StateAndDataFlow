@@ -14,8 +14,12 @@ struct RegisterView: View {
     
     var body: some View {
         VStack {
-            TextField("Enter your name...", text: $userName)
-                .multilineTextAlignment(.center)
+            HStack {
+                TextField("Enter your name...", text: $userName)
+                    .multilineTextAlignment(.center)
+                Text("0")
+                    .padding(.trailing, 50)
+            }
             Button(action: registerUser) {
                 HStack{
                     Image(systemName: "checkmark.circle")
