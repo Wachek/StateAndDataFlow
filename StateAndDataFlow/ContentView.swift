@@ -11,10 +11,11 @@ struct ContentView: View {
     
     @StateObject private var timer = TimeCounter()
     @EnvironmentObject private var userManager: UserManager
+    @AppStorage(wrappedValue: "", "userName") var savedName
     
     var body: some View {
         VStack {
-            Text("Hi, \(userManager.name)")
+            Text("Hi, \(savedName)")
                 .font(.largeTitle)
                 .padding(.top, 100)
             Text("\(timer.counter)")
@@ -22,6 +23,19 @@ struct ContentView: View {
                 .padding(.top, 200)
             Spacer()
             ButtonView(timer: timer)
+            Spacer()
+            Button(action: { savedName = ""}) {
+                Text("Logout")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+            }
+            .frame(width: 200, height: 60)
+            .background(Color.blue)
+            .cornerRadius(20)
+            .overlay(RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.black, lineWidth: 4)
+            )
             Spacer()
         }
     }
@@ -40,7 +54,7 @@ struct ButtonView: View {
     
     var body: some View {
         Button(action: { timer.startTimer() }) {
-            Text("Start")
+            Text("\(timer.buttonTitle)")
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)

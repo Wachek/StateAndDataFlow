@@ -12,6 +12,8 @@ struct RegisterView: View {
     @State private var userName = ""
     @EnvironmentObject private var user: UserManager
     
+    @AppStorage(wrappedValue: "", "userName") var savedName
+    
     var body: some View {
         VStack {
             HStack {
@@ -41,6 +43,7 @@ struct RegisterView: View {
                         Image(systemName: "checkmark.circle")
                         Text("OK")
                     }
+                    .foregroundColor(.gray)
                 }
             }
         }
@@ -50,6 +53,7 @@ struct RegisterView: View {
         if !userName.isEmpty {
             user.name = userName
             user.isRegistered.toggle()
+            savedName = userName
         }
     }
 }

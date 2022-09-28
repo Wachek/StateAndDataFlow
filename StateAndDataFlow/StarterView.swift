@@ -10,10 +10,11 @@ import SwiftUI
 struct StarterView: View {
     
     @EnvironmentObject private var user: UserManager
+    @AppStorage(wrappedValue: "", "userName") var savedName
     
     var body: some View {
         Group {
-            if user.isRegistered {
+            if !savedName.isEmpty {
                 ContentView()
             } else {
                 RegisterView()
